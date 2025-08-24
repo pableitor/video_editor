@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reproductor de Video</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Reproductor de Video</h1>
+    </header>
+
+    <main>
+      <!-- Sección de carga de video -->
+      <section class="upload-section">
+        <div class="upload-area" id="uploadArea">
+          <input type="file" id="videoInput" accept="video/mp4" hidden />
+          <div class="upload-content">
+            <i class="upload-icon">📁</i>
+            <p>Haz clic aquí o arrastra un archivo MP4</p>
+            <button class="upload-btn" id="uploadBtn">Seleccionar Video</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección del reproductor de video -->
+      <section class="video-section" id="videoSection" style="display: none;">
+        <div class="video-container">
+          <video id="videoPlayer" controls>
+            Tu navegador no soporta el elemento video.
+          </video>
+
+          <!-- Timeline simple (seek + tiempo) -->
+          <div class="timeline-container">
+            <div class="timeline" id="timeline">
+              <div class="timeline-track" id="timelineTrack">
+                <div class="playhead" id="playhead"></div>
+              </div>
+            </div>
+            <div class="timeline-controls">
+              <span id="currentTime">00:00</span>
+              <span>/</span>
+              <span id="totalTime">00:00</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controles de reproducción -->
+        <div class="controls-panel">
+          <div class="playback-controls">
+            <button class="control-btn" id="frameBackBtn" title=", o Flecha Izquierda: Frame anterior">⏮️</button>
+            <button class="control-btn" id="playPauseBtn" title="Espacio: Play/Pause">▶️</button>
+            <button class="control-btn" id="frameForwardBtn" title=". o Flecha Derecha: Frame siguiente">⏭️</button>
+          </div>
+
+          <!-- Opciones de precisión -->
+          <div class="precision-controls" style="display:flex;align-items:center;gap:10px;font-size:0.9rem;color:#555;">
+            <label style="display:flex;align-items:center;gap:6px;cursor:pointer;">
+              <input type="checkbox" id="snapToggle" checked>
+              Snap
+            </label>
+            <label style="display:flex;align-items:center;gap:6px;">
+              Modo
+              <select id="snapMode" style="padding:6px 10px;border-radius:8px;border:1px solid #ccc;">
+                <option value="nearest" selected>Nearest</option>
+                <option value="directional">Floor/Ceil</option>
+              </select>
+            </label>
+            <span class="tooltip" aria-label="Ayuda" data-tip="SHIFT + rueda del ratón: frame ± | . y ,: frame ± | Espacio: Play/Pause" style="user-select:none;cursor:help;opacity:0.8;">ℹ️</span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
