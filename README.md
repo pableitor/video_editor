@@ -1,81 +1,81 @@
-# Editor de Video Web
+# Web Video Editor
 
-Una aplicación web para cargar, editar y reproducir videos MP4 con funcionalidades avanzadas de control de reproducción y edición básica.
+A web application for uploading, editing, and playing MP4 videos with advanced playback control and basic editing features.
 
-## Características
+## Features
 
-### 🎥 Carga de Video
-- Carga de archivos MP4 desde el equipo local
-- Interfaz drag & drop intuitiva
-- Soporte para selección manual de archivos
+### 🎥 Video Upload
+- Upload MP4 files from your local device
+- Intuitive drag & drop interface
+- Support for manual file selection
 
-### ▶️ Controles de Reproducción
-- **Play/Pause**: Control básico de reproducción
-- **Frame by Frame**: Navegación cuadro por cuadro (adelante/atrás)
-- **Control de Velocidad**: 0.25x, 0.5x, 1x, 1.5x, 2x
-- **Timeline interactiva**: Navegación directa por clic
+### ▶️ Playback Controls
+- **Play/Pause**: Basic playback control
+- **Frame by Frame**: Frame navigation (forward/backward)
+- **Speed Control**: 0.25x, 0.5x, 1x, 1.5x, 2x
+- **Interactive Timeline**: Direct click navigation
 
-### ✂️ Funciones de Edición
-- **Marcar Inicio/Final**: Selección de segmentos específicos
-- **Vista previa del corte**: Visualización del segmento seleccionado
-- **Timeline visual**: Indicador gráfico del segmento seleccionado
-- **Resetear selección**: Limpiar marcadores
+### ✂️ Editing Features
+- **Mark Start/End**: Select specific segments
+- **Cut Preview**: View the selected segment
+- **Visual Timeline**: Graphical indicator of selected segment
+- **Reset Selection**: Clear markers
 
-### ⌨️ Atajos de Teclado
-- **Espacio**: Play/Pause
-- **Flecha Izquierda**: Frame anterior
-- **Flecha Derecha**: Frame siguiente  
-- **Ctrl + I**: Marcar inicio
-- **Ctrl + O**: Marcar final
+### ⌨️ Keyboard Shortcuts
+- **Space**: Play/Pause
+- **Left Arrow**: Previous frame
+- **Right Arrow**: Next frame
+- **Ctrl + I**: Mark start
+- **Ctrl + O**: Mark end
 
-## Estructura de Archivos
+## File Structure
 
 ```
 video_editor/
-├── index.html      # Estructura HTML principal
-├── styles.css      # Estilos y presentación
-├── script.js       # Lógica y comportamiento
-└── README.md       # Documentación
+├── index.html      # Main HTML structure
+├── styles.css      # Styling and presentation
+├── script.js       # Application logic
+└── README.md       # Documentation
 ```
 
-## Uso
+## Usage
 
-1. **Abrir la aplicación**: Abre `index.html` en tu navegador web
-2. **Cargar video**: Haz clic en "Seleccionar Video" o arrastra un archivo MP4
-3. **Reproducir**: Usa los controles de reproducción para navegar por el video
-4. **Editar**: 
-   - Navega al punto de inicio deseado y haz clic en "Marcar Inicio"
-   - Navega al punto final y haz clic en "Marcar Final"
-   - El segmento se mostrará visualmente en la timeline
-5. **Cortar**: Haz clic en "Cortar Segmento" para preparar la descarga
+1. **Open the application**: Open `index.html` in your web browser
+2. **Upload video**: Click "Select Video" or drag and drop an MP4 file
+3. **Playback**: Use the playback controls to navigate through the video
+4. **Edit**:
+   - Navigate to the desired start point and click "Mark Start"
+   - Navigate to the end point and click "Mark End"
+   - The selected segment will be visually displayed on the timeline
+5. **Cut**: Click "Cut Segment" to prepare for download
 
-## Limitaciones Técnicas
+## Technical Limitations
 
-- **Corte real de video**: La funcionalidad actual simula el corte. Para implementar corte real de segmentos se requiere:
-  - Procesamiento en servidor con FFmpeg
-  - O uso de FFmpeg.js en el cliente (librería adicional)
-- **Formatos soportados**: Solo MP4 por simplicidad
-- **Tamaño de archivo**: Limitado por la memoria del navegador
+- **Actual video cutting**: The current functionality simulates cutting. To implement actual segment cutting, you would need:
+  - Server-side processing with FFmpeg
+  - Or client-side processing with FFmpeg.js (additional library)
+- **Supported formats**: Only MP4 for simplicity
+- **File size**: Limited by browser memory
 
-## Tecnologías Utilizadas
+## Technologies Used
 
-- **HTML5**: Estructura y elemento `<video>`
-- **CSS3**: Estilos modernos con gradientes y animaciones
-- **JavaScript ES6+**: Lógica de la aplicación
-- **Canvas API**: Para futuras mejoras de procesamiento
+- **HTML5**: Structure and `<video>` element
+- **CSS3**: Modern styling with gradients and animations
+- **JavaScript ES6+**: Application logic
+- **Canvas API**: For future processing enhancements
 
-## Compatibilidad
+## Compatibility
 
-- Navegadores modernos con soporte HTML5
-- Chrome, Firefox, Safari, Edge (versiones recientes)
-- Responsive design para dispositivos móviles
+- Modern browsers with HTML5 support
+- Chrome, Firefox, Safari, Edge (recent versions)
+- Responsive design for mobile devices
 
-## Posibles Mejoras Futuras
+## Possible Future Improvements
 
-1. **Corte real de video** con FFmpeg.js
-2. **Múltiples formatos** de video (AVI, MOV, etc.)
-3. **Efectos básicos** (filtros, transiciones)
-4. **Exportación en diferentes calidades**
-5. **Guardado de proyectos** en localStorage
-6. **Vista de forma de onda** para audio
-7. **Zoom en timeline** para mayor precisión
+1. **Actual video cutting** with FFmpeg.js
+2. **Multiple video formats** (AVI, MOV, etc.)
+3. **Basic effects** (filters, transitions)
+4. **Export in different qualities**
+5. **Project saving** to localStorage
+6. **Audio waveform visualization**
+7. **Timeline zoom** for better precision
